@@ -59,6 +59,8 @@ To access Kibana, navigate to http://localhost:5601
 
 At this stage, the app provides naive implementations for URL processing and short link generation, as well as for a distributed numeric sequence mechanism.
 
+In production, this application is likely to be split in two: the URL provisioning app and the URL serving app, corresponding to the `LinkController` and `RedirectController` respectively.
+
 To run the application outside Docker:
 
 - change `application.yml` to point to `localhost` instead of `elasticsearch`
