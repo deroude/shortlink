@@ -48,6 +48,7 @@ docker-compose up --build
 The following methods are available:
 
 `POST http://localhost:8080/link BODY http://your.address.com/with/a/long/path` will yeld a hash.
+
 `GET http://localhost:8080/to/hash` will redirect to the original URL.
 
 The latter method will also add information to Elastic about the redirect (hash, origin & timestamp).
@@ -58,3 +59,7 @@ To access Kibana, navigate to http://localhost:5601
 
 At this stage, the app provides naive implementations for URL processing and short link generation, as well as for a distributed numeric sequence mechanism.
 
+To run the application outside Docker:
+
+- change `application.yml` to point to `localhost` instead of `elasticsearch`
+- run the Elastic stack using `docker-compose -f docker-compose_elk.yml up`, then run the application from the IDE or shell.
