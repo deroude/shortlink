@@ -1,0 +1,5 @@
+spring:
+    data:
+        elasticsearch:
+            cluster-nodes: elasticsearch:9300
+            cluster-name: docker-cluster
